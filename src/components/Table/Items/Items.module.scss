@@ -1,0 +1,41 @@
+.items {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 52px;
+    padding: 7px 52px 5px 20px;
+    gap: 25px;
+    
+    .text {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        justify-content: center;
+        h4 {
+            font-size: 15px;
+            font-weight: 4008px;
+        }
+        p {
+            font-size: 13px;
+            color: #9DA8BA;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+    .date {
+        display: flex;
+        width: 30%;
+        padding-left: 50px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    
+}
+.line { 
+    width: 100%;
+    border-bottom: 2px solid #EDF2F8; /* Параметры линии */
+   }
+
+.endRotation {
+    flex: 1 1 auto;
+}

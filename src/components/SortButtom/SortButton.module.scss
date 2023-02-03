@@ -22,3 +22,10 @@ button {
 .active {
     color: black;
 }
+
+
+@media screen and (max-width: 850px) {
+    .btn {
+        display: none;
+    }
+  }

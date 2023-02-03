@@ -2,6 +2,7 @@
     table {
         border-collapse: collapse;
         width: 100%;
+        
       }
       .title {
         padding: 6px 0px;
@@ -18,4 +19,11 @@
             flex: 1 1 auto;
         }
       }
+}
+.tr {
+  background-color: #EDF2F8;
+  height: 36px;
+  .name {
+    text-align: start;
+  }
 }

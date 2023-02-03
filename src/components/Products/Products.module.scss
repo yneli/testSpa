@@ -1,5 +1,4 @@
 .container {
-
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -19,7 +18,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-
     h1 {
         font-size: 22px;
         font-weight: 600;
@@ -40,7 +38,7 @@
         }
         .search {
             position: relative;
-            img {
+            .loap {
                 position: absolute;
                 top: 10px;
                 left: 13px;
@@ -62,3 +60,20 @@
         padding-top: 10px;
     }
 }
+.clear {
+    position: absolute;
+    top: 12px;
+    left: 290px;
+    opacity: 0.4;
+}
+
+@media screen and (max-width: 850px) {
+    .header{
+        padding: 0px 0px ;
+
+    }
+    .buttons {
+        display: flex;
+        gap: 0px;
+    }
+  }

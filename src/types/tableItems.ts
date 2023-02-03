@@ -8,8 +8,10 @@ export interface TableItemsProps {
     category: string;
     old_price: any;
     disclaimer?: string;
-    stars: any;
+    stars?: any;
     discount?: any;
     new_price?: any;
+    id: string;
+    
 
 }

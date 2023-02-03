@@ -1,0 +1,30 @@
+.pagination {
+    display: flex;
+    gap: 5px;
+    a {
+        cursor: pointer;
+        &:hover{
+            background-color: gray;
+        }
+    }
+    
+    li {
+
+        cursor: pointer;
+        display: inline-block;
+        padding: 2px 10px;
+        border: 1px solid gray;
+        border-radius: 2px;
+        box-shadow: 0px 1px 1px 0px gray;
+        color: #4D5969;
+        &:hover{
+            background-color: gray;;
+        }
+        &:active {
+            opacity: 0.5;
+        }
+        
+    }
+   
+   
+}

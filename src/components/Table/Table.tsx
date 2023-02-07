@@ -1,9 +1,18 @@
 import style from "./Table.module.scss";
 import { Items } from "./Items/Items";
-import {  useAppSelector } from "../../redux/hook";
+import { useAppDispatch, useAppSelector } from "../../redux/hook";
+import { getItems } from "../../redux/slices/productsSlice";
+import React from "react";
 
-export const Table = () => {
+export const Table = ({ indexOfFirstRecord, indexOfLastRecord, input}:{indexOfLastRecord:any, indexOfFirstRecord:any, input:any}) => {
   const itemData = useAppSelector((state) => state.products.items);
+  const disptach = useAppDispatch();
+
+  React.useEffect(() => {
+    disptach(getItems());
+  },[]);
+
+  const currentRecords = itemData?.slice(indexOfFirstRecord, indexOfLastRecord);
 
   return <>
     <div className={style.table}>
@@ -16,7 +25,8 @@ export const Table = () => {
             <th>Начало ротации</th>
             <th>Конец ротации</th>
           </tr>
-          {itemData?.map((item:any) => <Items key={item.views} {...item} ></Items>)}
+          {currentRecords?.filter((word:any):any => word.name.toLowerCase().includes(input.toLowerCase()))
+            .map((item:any) => <Items key={item.views} {...item}></Items>)}
         </tbody>
       </table>
     </div>
